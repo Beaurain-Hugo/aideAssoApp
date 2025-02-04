@@ -19,11 +19,14 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       drawer: MyDrawer(),
       appBar: AppBar(
-        title: Text(
-          'Page Home',
-          style: TextStyle(fontSize: 24, color: Colors.white),
+        title: Center(
+          child: Image.asset(
+              "Logo_aide_asso.png",
+              width:200
+          ),
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.white,
+        shadowColor: Colors.black,
         actions: [
           IconButton(
             icon: Icon(Icons.logout),
@@ -33,10 +36,8 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-
-      ),
-    );
+      body: Text("test"),
+      );
   }
 }
 
