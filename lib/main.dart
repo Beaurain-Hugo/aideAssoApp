@@ -6,6 +6,7 @@ import 'package:aideAsso/pages/tresorerie.page.dart';
 import 'package:aideAsso/pages/home.page.dart';
 import 'package:aideAsso/pages/authentification.page.dart';
 import 'package:aideAsso/pages/inscription.page.dart';
+import 'package:aideAsso/pages/dashboard.page.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,11 +14,17 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Aide Asso',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
       home: HomePage(), // Écran d'attente
       routes: {
+        '/dashboard': (context) => DashboardPage(),
         '/information': (context) => InformationPage(),
         '/benevole': (context) => BenevolePage(),
         '/tresorerie': (context) => TresoreriePage(),
