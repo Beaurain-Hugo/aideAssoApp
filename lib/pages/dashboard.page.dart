@@ -18,21 +18,10 @@ class DashboardPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: MyDrawer(),
       appBar: AppBar(
-        title: Text(
-          'Page Tableau de bord',
-          style: TextStyle(fontSize: 24, color: Colors.white),
-        ),
-        backgroundColor: Colors.blue,
-        actions: [
-          /*IconButton(
-            icon: Icon(Icons.logout),
-            onPressed: () {
-              _deconnexion(context); // Appeler la méthode de déconnexion
-            },
-          ),*/
-        ],
+        automaticallyImplyLeading: false, // Supprime la flèche de retour
+        title: Text("Page Tableau de bord",style: TextStyle(fontSize: 24, color: Colors.white)),
+        backgroundColor: Colors.blue, // Change la couleur de fond
       ),
       body: Center(
         child: Text(
@@ -41,5 +30,6 @@ class DashboardPage extends StatelessWidget {
         ),
       ),
     );
+
   }
 }
