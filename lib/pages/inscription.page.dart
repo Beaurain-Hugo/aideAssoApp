@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart'; // Import nécessaire
+import 'package:aideAsso/menu/navigationBar.widget.dart';
 
 class InscriptionPage extends StatefulWidget {
   @override
@@ -75,11 +76,12 @@ class _InscriptionPageState extends State<InscriptionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false, // Supprime la flèche de retour
+        backgroundColor: Colors.blue, // Change la couleur de fond
         title: Text(
           'Page Inscription',
           style: TextStyle(fontSize: 24, color: Colors.white),
         ),
-        backgroundColor: Colors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
@@ -166,6 +168,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
           ),
         ),
       ),
+      bottomNavigationBar: MyBottomNavigationBar(currentIndex: 4), // Toujours 4 ici
     );
   }
 }

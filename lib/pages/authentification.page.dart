@@ -40,11 +40,9 @@ class _AuthentificationPageState extends State<AuthentificationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Page Authentification',
-          style: TextStyle(fontSize: 24, color: Colors.white),
-        ),
-        backgroundColor: Colors.blue,
+        automaticallyImplyLeading: false, // Supprime la flèche de retour
+        title: Text("Authentification",style: TextStyle(fontSize: 24, color: Colors.white)),
+        backgroundColor: Colors.blue, // Change la couleur de fond
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),

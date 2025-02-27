@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       ),
       home: HomePage(), // Écran d'attente
       routes: {
+        '/home': (context) => HomePage(),
         '/dashboard': (context) => DashboardPage(),
         '/information': (context) => InformationPage(),
         '/benevole': (context) => BenevolePage(),
