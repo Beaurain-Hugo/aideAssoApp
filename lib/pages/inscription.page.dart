@@ -154,15 +154,16 @@ class _InscriptionPageState extends State<InscriptionPage> {
               ),
               SizedBox(height: 16),
               // Bouton pour aller à la page d'authentification si déjà un compte
-              TextButton(
-                child: Text(
-                  "J'ai déjà un compte",
-                  style: TextStyle(fontSize: 22),
-                ),
+              ElevatedButton(
                 onPressed: () {
                   Navigator.pop(context);
                   Navigator.pushNamed(context, '/authentification');
                 },
+                child: Text(
+                  "J'ai déjà un compte",
+                  style: TextStyle(fontSize: 22),
+                ),
+
               ),
             ],
           ),

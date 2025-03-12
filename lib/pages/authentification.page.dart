@@ -80,7 +80,7 @@ class _AuthentificationPageState extends State<AuthentificationPage> {
               ),
               SizedBox(height: 16),
               // Bouton pour aller à la page d'inscription
-              TextButton(
+              ElevatedButton(
                 child: Text(
                   "Je n'ai pas de compte",
                   style: TextStyle(fontSize: 22),

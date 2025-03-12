@@ -145,7 +145,10 @@ class CallToActionSection extends StatelessWidget {
           ),
           SizedBox(height: 10),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.pushNamed(context, '/inscription');
+            },
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.green,
               foregroundColor: Colors.white,

@@ -1,5 +1,6 @@
 class Association {
   final int id;
+  final int association_id;
   final String nom;
   final String numero_rna;
   final String numero_siren;
@@ -7,8 +8,8 @@ class Association {
   final String description;
   final String email;
   final String telephone;
-  final DateTime date_pub_jo;
   Association(this.id,
+              this.association_id,
               this.nom,
               this.numero_rna,
               this.numero_siren,
@@ -16,11 +17,11 @@ class Association {
               this.description,
               this.email,
               this.telephone,
-              this.date_pub_jo
       );
   factory Association.fromJson(Map<String, dynamic> data) {
     return Association(
       data['id'],
+      data['association_id'],
       data['nom'],
       data['numero_rna'],
       data['numero_siren'],
@@ -28,7 +29,6 @@ class Association {
       data['description'],
       data['email'],
       data['telephone'],
-      data['date_pub_jo'],
     );
   }
 }
